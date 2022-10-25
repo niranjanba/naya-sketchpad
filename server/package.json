@@ -1,0 +1,20 @@
+{
+    "name": "sketch-pad",
+    "version": "1.0.0",
+    "description": "Multiple users can connect and draw simultaneously ",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js"
+    },
+    "author": "Niranjan B A",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "http-status-codes": "^2.2.0",
+        "mongoose": "^6.6.7",
+        "socket.io": "^4.5.3"
+    }
+}
