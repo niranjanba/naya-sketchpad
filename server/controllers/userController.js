@@ -102,14 +102,17 @@ const saveUser = async (req, res, next) => {
  * @returns Randomly generated hex color
  */
 function generateRandomColor() {
-    const rangeSize = 100;
-    const parts = [
-        Math.floor(Math.random() * 256),
-        Math.floor(Math.random() * rangeSize),
-        Math.floor(Math.random() * rangeSize) + 256 - rangeSize,
-    ].sort((a, b) => Math.random() < 0.5);
+    // const rangeSize = 100;
+    // const parts = [
+    //     Math.floor(Math.random() * 256),
+    //     Math.floor(Math.random() * rangeSize),
+    //     Math.floor(Math.random() * rangeSize) + 256 - rangeSize,
+    // ].sort((a, b) => Math.random() < 0.5);
 
-    return "#" + parts.map((p) => ("0" + p.toString(16)).substr(-2)).join("");
+    // return "#" + parts.map((p) => ("0" + p.toString(16)).substr(-2)).join("");
+    return (
+        "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0")
+    );
 }
 
 module.exports = { getAllUsers, saveUser, getUser };
